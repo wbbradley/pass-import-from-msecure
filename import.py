@@ -26,7 +26,7 @@ def main():
                         password=row(6),
                         url=row(4),
                         user=row(5),
-                        notes=row(3))
+                        notes=row(3).replace('\r', '\n') if row(3) else None)
 
 def pass_insert(subdir, name, password, url, user, notes):
     remapping = {
